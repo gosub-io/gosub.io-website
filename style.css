@@ -1,0 +1,22 @@
+html {
+    color: #000000;
+    background-color: #b9b9b9;
+}
+
+@media (prefers-color-scheme: dark) {
+    html {
+        background: #303030;
+        color: #dadada;
+    }
+}
+
+.layout {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+a,
+a:visited {
+    color: #6e40c9;
+}
