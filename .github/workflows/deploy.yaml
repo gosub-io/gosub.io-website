@@ -23,4 +23,4 @@ jobs:
           SSH_KNOWN_HOSTS: ${{secrets.SSH_KNOWN_HOSTS}}
           SSH_DEPLOY_KEY: ${{secrets.SSH_DEPLOY_KEY}}
       - name: Rsync
-        run: rsync -avz build/ deploy@developer.gosub.io:/wwwroot/gosub.io/
+        run: rsync -avz public/ deploy@developer.gosub.io:/wwwroot/gosub.io/public
