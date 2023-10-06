@@ -1,0 +1,16 @@
+name: Build and Deploy
+
+on:
+  push:
+    tags:
+      - v*
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-22.04
+    steps:
+      - uses: actions/checkout@v3
+      - name: Rsync
+        run: rsync -avz build/ deploy@developer.gosub.io:/wwwroot/gosub.io/
