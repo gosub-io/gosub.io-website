@@ -1,0 +1,39 @@
+$accent: #ea803a;
+$accent-dark: #fa4e4b;
+$accent-light: #fac64b;
+
+
+$accent-gradient-dark: linear-gradient(
+                45deg,
+                $accent,
+                $accent-dark 30%,
+                white 60%
+);
+
+$accent-gradient-light: linear-gradient(
+                45deg,
+                $accent-dark,
+                $accent-light 30%,
+                white 60%
+);
+
+
+.textGradientDark {
+  background-image: $accent-gradient-dark;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-size: 400%;
+  background-position: 0;
+}
+
+.textGradientLight {
+  background-image: $accent-gradient-light;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke: 1px white;
+
+
+  background-size: 400%;
+  background-position: 0;
+
+}

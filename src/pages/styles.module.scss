@@ -1,0 +1,72 @@
+
+.main {
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+}
+
+.background {
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+
+  & > img:not(.logo) {
+    position: absolute;
+    object-fit: cover;
+    width: 250vw;
+    height: unset;
+    top: -118vh;
+    left: -45vw;
+
+    animation: rotate 240s linear infinite;
+
+    transform-origin: 53.3% 49.5%;
+
+    @keyframes rotate {
+      0% {
+        transform: rotate(0deg);
+      }
+      100% {
+        transform: rotate(360deg);
+      }
+    }
+  }
+
+  & > .logo {
+    position: absolute;
+    top: 50%;
+    right: -2.7rem;
+    transform: translate(-50%, -50%);
+    //object-fit: contain;
+    width: 15rem;
+    height: 15rem;
+
+    border-radius: 999rem;
+
+  }
+
+}
+
+.box {
+  width: 1rem;
+  height: 1rem;
+  //background: red;
+  position: absolute;
+  top: calc(50% - .5rem);
+  right: 11.5%;
+}
+
+.title {
+  margin-left: 10rem;
+  max-width: 30rem;
+  //font-size: 6rem;
+  text-transform: uppercase;
+
+}
