@@ -14,15 +14,17 @@
         display: flex;
         flex-direction: column;
         align-items: center;
-        padding: 20px;
         text-align: center;
       }
       h1 {
         font-size: 6em;
+        padding: 0;
+        margin: 0;
       }
       blockquote {
         font-size: 1.5em;
         margin-top: 0;
+        padding-top: 20px;
       }
       p {
         font-size: 1.2em;
@@ -32,18 +34,61 @@
         padding-bottom: 20px;
       }
 
-      a,
-      a:visited {
-        color: #6e40c9;
+      .links {
+        list-style-type: none;
+      }
+      .links li {
+        padding: 5px;
+      }
+
+      a {
+        color: cyan;
         text-decoration: none;
         border-bottom: 2px solid #6e40c9;
         transition: border-bottom 0.3s ease-in-out;
       }
 
+      a:link {
+        text-decoration: none;
+      }
+
+      a:visited {
+        text-decoration: none;
+      }
+
       a:hover {
-        border-bottom: 2px solid #ffffff;
+        text-decoration: none;
+      }
+
+      a:active {
+        text-decoration: none;
+      }
+
+      .logo {
+          width: 25%;
+          min-width: 200px;
+          max-width: 400px;
+      }
+
+      h1 {
+        font-size: 72px;
+        background: rgb(96,243,236);
+        background: linear-gradient(180deg, rgba(96,243,236,1) 40%, rgba(30,84,231,1) 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+
+      .small {
+        font-size: 10px;
       }
     </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+
     <title>Gosub - The gateway to optimized searching and browsing</title>
   </head>
 
@@ -51,12 +96,17 @@
     <div class="layout">
       <h1>Gosub</h1>
       <p id="quote">The gateway to optimized searching and browsing</p>
+
+      <img class="logo" src="Logo-01.svg" alt="logo">
       <blockquote>
-        "From small beginnings come big endings"
+        Join us on the journey to a new web browser
       </blockquote>
-      <p>
-        <a id="link" href="https://github.com/gosub-browser">GitHub</a>
-      </p>
+
+      <ul class="links">
+        <li><a id="link1" href="https://github.com/gosub-browser"><i class="fa-brands fa-github"></i> GitHub <i class="small fa-solid fa-arrow-up-right-from-square"></i></a>
+        <li><a id="link2" href="#"><i class="fa-brands fa-discord"></i> Global Discord (soon available) <i class="small fa-solid fa-arrow-up-right-from-square"></i></a>
+        <li><a id="link3" href="https://chat.developer.gosub.io"><i class="fa-solid fa-comments"></i> Developer chat - Zulip <i class="small fa-solid fa-arrow-up-right-from-square"></i></a>
+      </ul>
     </div>
   </body>
 </html>
