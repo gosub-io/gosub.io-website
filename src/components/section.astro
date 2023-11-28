@@ -1,0 +1,45 @@
+---
+interface Props {
+    first?: boolean;
+    last?: boolean;
+}
+
+const {first, last}: Props = Astro.props
+
+let classes = "p-4 "
+if (first) classes += "first "
+if (last) classes += "last "
+---
+
+
+<section class={classes}>
+    <div class="p-8">
+        <slot/>
+    </div>
+</section>
+
+
+<style>
+    .first {
+        padding-top: 1rem
+    }
+
+    .last {
+        padding-bottom: 1rem
+    }
+
+    div {
+        width: 100%;
+        min-height: 8rem;
+        background-image: url("/gradients/texture.png");
+        background-size: 80rem;
+        background-repeat: repeat;
+        background-position: -4rem;
+
+        border-radius: 1.5rem;
+        box-shadow: 0 4px 4px #0000008F;
+        border: 2px solid rgba(0,0,0, .25)
+    }
+
+
+</style>

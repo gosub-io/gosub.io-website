@@ -1,0 +1,43 @@
+---
+import {Image} from "astro:assets"
+
+
+interface Props {
+    height: number;
+    width: number;
+    src: string;
+    top?: number;
+    left?: number;
+    right?: number;
+    scale?: number;
+    rotate?: number;
+}
+
+const { height, width, src, top, left, right, scale, rotate }: Props = Astro.props
+
+let imgstyle = `scale: ${scale ?? 1};`
+imgstyle += `transform: rotate(${rotate ?? 0}deg);`
+imgstyle += left ? `left: ${left}rem;` : ""
+imgstyle += right ? `right: ${right}rem;` : ""
+
+
+
+---
+
+<div style=`top: calc(${top ?? 1} / ${height * (scale ?? 1)} * 100%); min-height: ${width * (scale ?? 1)}px; min-width: ${height * (scale ?? 1)}px`>
+    <Image src={src} height={height} width={width}  alt="gradient" class="gradient" style={imgstyle}/>
+</div>
+
+<style>
+
+    div {
+        position: absolute;
+        z-index: -1;
+        overflow: visible;
+        opacity: 0.8;
+    }
+
+</style>
+
+
+

@@ -1,11 +1,23 @@
+@tailwind;
+
 html {
   font-family: system-ui, sans-serif;
-  background: #13151a;
+  background: #01012B;
   background-size: 224px;
+  overflow-x: hidden;
 }
 
 body {
+  font-family: "Inter",  sans-serif;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  color: white;
   margin: 0;
+}
+
+main {
+  margin: 10px;
 }
 
 code {
@@ -18,3 +30,47 @@ code {
   Courier New,
   monospace;
 }
+
+
+a.button {
+  width: 16rem;
+  height: 4.5rem;
+  border: none;
+  align-content: center;
+
+}
+
+.button, .btn-hover {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  border-radius: .25rem;
+  transition: scale 0.2s cubic-bezier(.68, -0.55, .27, 1.55),
+  translate 0.2s cubic-bezier(.68, -0.55, .27, 1.55);
+}
+
+.button:hover, .btn-hover:hover {
+  scale: 1.1;
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    //vertical-align: middle;
+    gap: 2rem;
+    width: 90%;
+}
+
+.buttons-small > a.button {
+  width: 10rem;
+  height: 3rem;
+}
+
+.back {
+  border: 2px solid #3f5967 !important;
+  background-color: #1f2937;
+  color: white;
+}
+

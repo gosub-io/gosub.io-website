@@ -1,0 +1,56 @@
+---
+import Gradient from "./gradient.astro"
+import {Image} from "astro:assets"
+---
+<div class="modularity lg:p-3">
+    <Gradient src="/gradients/modularity.svg" width={1100} height={873} top={-16}/>
+
+    <!--<div class="bg-black bg-opacity-50 md:p-3 rounded-md">-->
+    <div class="md:p-3 rounded-md">
+        <h2 class="text-3xl mb-2 font-bold">
+            A New Web Engine Written From Scratch
+        </h2>
+        <div class="text-justify text-white">
+            <p class="mb-3 mt-3">
+                Gosub is a web browser with its own web engine. This engine is a modular system that allows developers to
+                easily plug in their own components to customize the functionality of the engine. This will result in a more
+                diverse landscape of browsers in the future.
+            </p>
+            <p class="mb-3 mt-3">
+                With a pluggable engine, developers can create their own rendering pipeline, their own JavaScript engine without
+                a single company or organisation forcing their own agenda on the web.
+            </p>
+        </div>
+
+        <div class="md:flex flex-row flex-wrap">
+            <div class="sm:basis-1/3 p-2">
+                <p class="text-left min-h-48 p-5 border-2 rounded-md border-gray-400 bg-zinc-700/40 flex justify-center items-center">
+                    Select your JavaScript engine
+                    <Image src="/javascript.svg" class="m-2" alt="Javascript" width="100" height="100" />
+                </p>
+            </div>
+            <div class="sm:basis-1/3 p-2">
+                <p class="text-left min-h-48 p-5 border-2 rounded-md border-gray-400 bg-zinc-700/40 flex justify-center items-center">
+                    Customizable Rendering pipeline
+                    <Image src="/rendering.svg" class="m-2" alt="Rendering" width="100" height="100" />
+                </p>
+            </div>
+            <div class="sm:basis-1/3 p-2">
+                <p class="text-left min-h-48 p-5 border-2 rounded-md border-gray-400 bg-zinc-700/40 flex justify-center items-center">
+                    Plug and play components like bricks
+                    <Image src="/brick.svg" class="m-2" alt="Bricks" width="100" height="100" />
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<style>
+    .modularity {
+        display: flex;
+        position: relative;
+        flex-direction: column;
+        align-items: center;
+    }
+</style>

@@ -1,0 +1,68 @@
+---
+import { Image } from 'astro:assets';
+---
+
+<nav x-data="{open: false}" @click.away="open=false">
+    <div class="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
+        <div class="relative flex h-16 items-center justify-between">
+            <div class="absolute inset-y-0 right-0 flex items-center sm:hidden">
+                <button type="button" @click="open=!open" class="relative inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white" aria-controls="mobile-menu" aria-expanded="false">
+                    <span class="absolute -inset-0.5"></span>
+                    <span class="sr-only">Open main menu</span>
+                    <svg x-show="!open" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="white" aria-hidden="true">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                    </svg>
+                    <svg x-show="open" x-cloak class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="white" aria-hidden="true">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                    </svg>
+                </button>
+            </div>
+            <div class="flex flex-1 sm:items-stretch sm:justify-start" >
+                <div class="flex flex-shrink-0 items-center">
+                <a href="/">
+                    <img class="h-10 w-auto" src="/gosub-logo.svg" alt="Gosub Logo">
+                </a>
+                </div>
+                <div class="hidden sm:ml-6 sm:block">
+                    <div class="flex space-x-4">
+                        <a href="/" class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Home</a>
+                        <a href="/learn-more" class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white">About Gosub</a>
+                        <a href="/status" class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Current Status</a>
+                        <a href="/contribute" class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Contribute</a>
+                        <a href="/contact" class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Contact</a>
+                    </div>
+                </div>
+            </div>
+            <div class="absolute inset-y-0 right-0 items-center pr-2 hidden md:flex gap-2">
+                <a class="relative rounded-full bg-gray-800 p-2 text-gray-400 hover:scale-110 focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800" href="https://chat.gosub.io">
+                    <Image src="/icons/discord.svg" alt="Discord" width="24" height="24" />
+                </a>
+                <a class="relative rounded-full bg-gray-800 p-2 text-gray-400 hover:scale-110 focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800" href="https://github.com/gosub-io/gosub-engine">
+                    <Image src="/icons/github.svg" alt="Github" width="24" height="24" />
+                </a>
+                <a class="relative rounded-full bg-gray-800 p-2 text-gray-400 hover:scale-110 focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800" href="https://chat.developer.gosub.io">
+                    <Image src="/icons/zulip.svg" alt="Zulip" width="24" height="24" />
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div class="sm:hidden" x-show="open" x-cloak>
+        <div class="right-0 mr-4 z-50 border-white border-2 rounded-md bg-black space-y-1 px-2 pb-3 pt-2 absolute">
+            <a href="/" class="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Home</a>
+            <a href="/learn-more" class="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white">About Gosub</a>
+            <a href="/status" class="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Current Status</a>
+            <a href="/contribute" class="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Contribute</a>
+            <a href="/contact" class="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Contact</a>
+        </div>
+    </div>
+</nav>
+
+<style>
+
+    a {
+        transition: scale 0.2s cubic-bezier(.68, -0.55, .27, 1.55),
+        translate 0.2s cubic-bezier(.68, -0.55, .27, 1.55);
+    }
+
+</style>

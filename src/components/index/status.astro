@@ -1,0 +1,39 @@
+---
+import Gradient from "./gradient.astro"
+---
+
+<section class="status lg:p-3">
+    <Gradient src="/gradients/status-left.svg" width={416} height={118} top={-38} left={0} scale={1.2}/>
+
+    <div class="flex-row">
+        <div class="basic-1/3">
+            <h2 class="text-3xl mb-2 font-bold">
+                Current status of the project
+            </h2>
+            <p class="mb-3 mt-3 text-justify text-white">
+                The project is still in its early stages. We are working on the core components of the engine like the CSS
+                system, rendering pipeline and JS integration. We are also working on the architecture of the engine to make
+                it as modular as possible.
+            </p>
+        </div>
+        <div class="basic-1/3">
+            <div class="buttons-small">
+                <a class="button read-more" href="/status">&raquo; Read more</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<style>
+    .status {
+        display: flex;
+        justify-content: space-between;
+        position: relative;
+    }
+
+    .read-more {
+        background-color: black;
+        color: white;
+        border: 2px solid white;
+    }
+</style>

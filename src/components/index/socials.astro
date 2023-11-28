@@ -1,0 +1,67 @@
+---
+import {Image} from 'astro:assets'
+---
+
+
+<div class="socials">
+    <ul class="center">
+        <li>
+            <a href="https://chat.gosub.io">
+                <Image src="/icons/discord.svg" alt="Discord" width="32" height="32"/>
+            </a>
+        </li>
+        <li>
+            <a href="https://github.com/gosub-io/gosub-engine">
+                <Image src="/icons/github.svg" alt="Github" width="32" height="32"/>
+            </a>
+        </li>
+        <li>
+            <a href="https://chat.developer.gosub.io">
+                <Image src="/icons/zulip.svg" alt="Zulip" width="32" height="32"/>
+            </a>
+        </li>
+
+    </ul>
+</div>
+
+
+<style>
+    .center {
+        margin: auto;
+    }
+
+    .socials {
+        margin-bottom: 1rem;
+    }
+
+    ul {
+        list-style: none;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 0 2rem;
+        padding: 0;
+        width: 16rem;
+    }
+
+    a {
+        color: white;
+        text-decoration: none;
+        font-size: 1.25rem;
+        font-weight: normal;
+    }
+
+    li {
+        padding: 0.5rem;
+        border-radius: 999999px;
+
+        background-color: #858B9833;
+        transition: scale 0.2s cubic-bezier(.68, -0.55, .27, 1.55),
+        translate 0.2s cubic-bezier(.68, -0.55, .27, 1.55);
+    }
+
+    li:hover {
+        scale: 1.1;
+    }
+
+</style>

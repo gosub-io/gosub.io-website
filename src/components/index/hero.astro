@@ -1,0 +1,69 @@
+---
+import Gradient from "./gradient.astro"
+---
+
+<section class="hero text-center ">
+    <Gradient src="/gradients/blurred-logo.svg" width={1607} height={1086} top={-1200} scale={1.2}/>
+
+    <h1 class="text-7xl mb-12 tracking-wide font-extrabold">Gosub</h1>
+    <h2 class="text-4xl font-bold">The Gateway to Optimized Search and Unlimited Browsing</h2>
+
+    <p>Discover a customizable browser engine built for the modern web.</p>
+
+    <div class="buttons">
+        <a class="button learn-more" href="/learn-more">Learn More</a>
+        <a class="button contribute" href="/contribute">Contribute</a>
+    </div>
+</section>
+
+
+<style>
+
+    .buttons {
+        width: 100%;
+        //height: 50px;
+        //align-items: center;
+        //justify-content: center;
+        //vertical-align: center;
+    }
+
+    .hero {
+        display: flex;
+        position: relative;
+        flex-direction: column;
+        vertical-align: center;
+        justify-content: center;
+        align-items: center;
+        background-color: rgba(0, 0, 0, 0.17);
+        background-image: url("/gradients/texture.png");
+        background-size: 100%;
+
+        border-radius: 2rem;
+        border: 2px solid #E0E0E0A4;
+
+        padding: 2rem;
+        width: 100%;
+    }
+
+    p {
+        margin: 3rem;
+    }
+
+    section {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 4rem;
+    }
+
+    .learn-more {
+        background-color: black;
+        color: white;
+        border: 2px solid white;
+    }
+
+    .contribute {
+        background-color: #F2F2F2;
+        color: black;
+    }
+
+</style>
