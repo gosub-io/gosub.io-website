@@ -1,0 +1,14 @@
+---
+import logo from "../../public/gosub-logo.svg"
+import { Image } from 'astro:assets';
+
+interface Props {
+    size: number;
+    className?: string;
+}
+
+const { size, className }  = Astro.props
+
+---
+
+<Image src={logo} alt="logo" width={size} height={size} class={className}/>

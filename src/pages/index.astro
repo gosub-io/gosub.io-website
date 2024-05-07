@@ -6,19 +6,23 @@ import styles from "./styles.module.scss"
 import background from "../../public/background.jpg"
 import logo from "../../public/logo.png"
 import {Image} from 'astro:assets'
+import Sidebar from "../components/sidebar.astro"
+import Mesh from "../components/mesh.astro"
 
 ---
 
 <Layout title="GoSuB Browser">
-    <main class={styles.main}>
-        <div class={styles.background}>
-            <Image src={background} alt="background"/>
-            <Image class={styles.logo} src={logo} alt="logo"/>
-        </div>
-        <h1 class={styles.title}>
-            <span class={colors.textGradientLight}>The gateway to optimized searching and browsing</span>
-        </h1>
+    <Sidebar/>
+    <Mesh/>
+    <!--<main class={styles.main}>-->
+    <!--    <div class={styles.background}>-->
+    <!--        <Image src={background} alt="background"/>-->
+    <!--        <Image class={styles.logo} src={logo} alt="logo"/>-->
+    <!--    </div>-->
+    <!--    <h1 class={styles.title}>-->
+    <!--        <span class={colors.textGradientLight}>The gateway to optimized searching and browsing</span>-->
+    <!--    </h1>-->
 
-        <div class={styles.box}></div>
-    </main>
+    <!--    <div class={styles.box}></div>-->
+    <!--</main>-->
 </Layout>

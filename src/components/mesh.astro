@@ -1,0 +1,93 @@
+---
+import Particles from "astro-particles"
+import type {ISourceOptions} from "tsparticles-engine"
+
+const options = {
+    background: {
+        color: "#02021E"
+    },
+    fullScreen: {
+        zIndex: -1
+    },
+    fps_limit: 60,
+    particles: {
+        color: {
+            value: "#ffffff"
+        },
+        links: {
+            color: "#ffffff",
+            enable: true,
+            width: 0.5,
+            opacity: 0.5,
+            distance: 150,
+        },
+        number: {
+            value: 256,
+            density: {
+                enable: true,
+            }
+        },
+        size: {
+            value: 3
+        },
+        bounce: {
+            horizontal: {
+                value: 0.5
+            },
+            vertical: {
+                value: 0.5
+            }
+        },
+        move: {
+            enable: true,
+            speed: 1.0,
+            attract: {
+                enable: true,
+                distance: 256,
+                rotateX: 600,
+                rotateY: 1200
+            },
+        },
+    },
+    interactivity: {
+        events: {
+            onHover: {
+                enable: true,
+                mode: "grab"
+            }
+        },
+        modes: {
+            grab: {
+                distance: 250,
+                links: {
+                    blink: false,
+                    consent: false,
+                    opacity: 1
+                }
+            }
+        }
+    },
+
+} as ISourceOptions
+---
+
+
+<script>
+    import {type Engine, tsParticles} from "tsparticles-engine"
+    import {loadFull} from "tsparticles"
+
+    window.particlesInit = async function (engine: Engine) {
+        console.log("particlesInit callback")
+        await loadFull(engine)
+    }
+</script>
+
+<Particles id="tsparticles" options={options} init="particlesInit"/>
+
+<style>
+    #mesh-background {
+        position: absolute;
+        width: 100svw;
+        height: 100svh;
+    }
+</style>
