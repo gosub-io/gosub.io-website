@@ -1,5 +1,7 @@
 ---
 import "./layout.scss"
+import Sidebar from "../components/sidebar.astro"
+import Mesh from "../components/mesh.astro"
 interface Props {
     title: string;
 }
@@ -17,7 +19,23 @@ const {title} = Astro.props
     <meta name="generator" content={Astro.generator}/>
     <title>{title}</title>
 </head>
-<body>
-<slot/>
+<body style="margin: 0">
+<Sidebar/>
+<!--<Mesh/>-->
+<main>
+    <slot/>
+</main>
 </body>
 </html>
+
+<style>
+    body {
+        font-family: 'Roboto', sans-serif;
+        display: flex;
+        flex-direction: column;
+        height: 100vh;
+    }
+
+    main {
+    }
+</style>
