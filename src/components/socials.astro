@@ -1,3 +1,50 @@
 ---
+import { Image } from 'astro:assets';
+
 
 ---
+
+
+<div>
+    <ul>
+        <li>
+            <a href="https://discord.gosub.io">
+                <Image src="/discord.svg" alt="Discord" width="32" height="32" />
+            </a>
+            </li>
+        <li>
+            <a>
+                <Image src="/github.svg" alt="Github" width="32" height="32" />
+            </a>
+        </li>
+        <li>
+            <a>
+                <Image src="/zulip.svg" alt="Zulip" width="32" height="32" />
+                </a>
+        </li>
+
+    </ul>
+</div>
+
+
+
+<style>
+    ul {
+        list-style: none;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 100%;
+        margin: 0 2rem;
+        padding: 0;
+        width: 16rem;
+    }
+
+    a {
+        color: white;
+        text-decoration: none;
+        margin: 0 10px;
+        font-size: 1.25rem;
+        font-weight: normal;
+    }
+</style>

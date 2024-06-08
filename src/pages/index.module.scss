@@ -7,7 +7,24 @@ h1 {
   text-transform: capitalize;
 }
 
-.header {
+header {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  justify-content: space-between;
+  padding: 1rem;
+  align-items: start;
+}
+
+.header > img {
   margin: 1rem;
-  display: flex;
+  justify-self: left;
+}
+
+.header > nav {
+  justify-self: center;
+}
+
+.header > div {
+  justify-self: right;
+  height: 4.5rem;
 }
