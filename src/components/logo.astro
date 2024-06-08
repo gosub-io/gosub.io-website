@@ -1,5 +1,5 @@
 ---
-import logo from "../../public/gosub-logo.svg"
+import logo from "@assets/gosub-logo.svg"
 import { Image } from 'astro:assets';
 
 interface Props {
@@ -11,4 +11,4 @@ const { size, className }  = Astro.props
 
 ---
 
-<Image src={logo} alt="logo" width={size} height={size} class={className}/>
+<Image src="/gosub-logo.svg" alt="logo" width={size} height={size} class={className}/>

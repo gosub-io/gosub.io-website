@@ -3,10 +3,21 @@ import Layout from '../layouts/layout.astro'
 import "./index.module.scss"
 import Logo from "../components/logo.astro"
 import styles from "./index.module.scss"
+import Section from "../components/section.astro"
+import Navigation from "../components/navigation.astro"
+import Socials from "../components/socials.astro"
 // import Home from "../components/home.astro"
 ---
 
 <Layout title="GoSuB Browser">
-    <h1 class={styles.name}>Gosub</h1>
-    <Logo/>
+    <header class={styles.header}>
+        <Logo size="128"/>
+        <Navigation/>
+        <Socials/>
+    </header>
+
+
+    <Section>
+
+    </Section>
 </Layout>

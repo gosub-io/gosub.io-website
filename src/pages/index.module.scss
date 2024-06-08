@@ -7,21 +7,7 @@ h1 {
   text-transform: capitalize;
 }
 
-
-@import url('https://fonts.googleapis.com/css2?family=Londrina+Sketch&display=swap');
-
-//@font-face {
-//  font-family: 'Londrina Sketch';
-//  src: local('Londrina Sketch'),
-//  url('LondriaSketch-Regular.ttf') format('truetype');
-//}
-
-.name {
-  background-image: linear-gradient(#60F3EC, #1E54E7);
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-  font-size: 12rem;
-  margin: 0;
-  //font-family: "Londria Sketch", Roboto, "Segoe UI", Arial, sans-serif;
-  font-family: "Londrina Sketch", sans-serif;
+.header {
+  margin: 1rem;
+  display: flex;
 }
