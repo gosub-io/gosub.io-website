@@ -3,11 +3,12 @@ import Layout from '../layouts/layout.astro'
 import Logo from "../components/logo.astro"
 import styles from "./index.module.scss"
 import Section from "../components/section.astro"
-import Navigation from "../components/navigation.astro"
-import Socials from "../components/socials.astro"
-import Hero from "../components/hero.astro"
-// import Home from "../components/home.astro"
-import {Image} from "astro:assets"
+import Navigation from "../components/index/navigation.astro"
+import Socials from "../components/index/socials.astro"
+import Hero from "../components/index/hero.astro"
+import Modularity from "../components/index/modularity.astro"
+import Status from "../components/index/status.astro"
+import Contribute from "../components/index/contribute.astro"
 ---
 
 <Layout title="GoSuB Browser">
@@ -16,32 +17,19 @@ import {Image} from "astro:assets"
         <Navigation/>
         <Socials/>
     </header>
-    <div class="blurred-wrapper">
-        <Image src="/blurred-logo.svg" alt="Logo Gradient" width="1607" height="1086" class="blurred-logo"/>
-    </div>
     <Hero/>
 
-    <Section>
 
+    <Section first>
+        <Modularity/>
     </Section>
+    <Section>
+        <Status/>
+    </Section>
+    <Section last>
+        <Contribute/>
+    </Section>
+    <footer>
+        <Socials/>
+    </footer>
 </Layout>
-
-
-<style>
-    .blurred-logo {
-        width: 100%;
-        max-width: 100vw;
-        overflow: hidden;
-        scale: 1.2;
-    }
-
-    .blurred-wrapper {
-        position: absolute;
-        top: 0;
-        z-index: -1;
-        width: 100vw;
-        overflow: hidden;
-    }
-
-
-</style>

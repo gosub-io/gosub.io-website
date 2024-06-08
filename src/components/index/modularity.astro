@@ -1,0 +1,62 @@
+---
+import Gradient from "./gradient.astro"
+---
+<div class="modularity">
+    <Gradient src="/gradients/modularity.svg" width="1100" height="873" top={-16}/>
+    <h2>
+        Empower Your Browser with Gosub's Modularity
+    </h2>
+
+    <p>
+        Gosub is a browser engine that puts customization at the forefront.
+        With its modular design, you can tailor your browsing experience to suit your needs.
+        Whether you want to tweak the CSS engine, enhance the HTML parser,
+        or optimize the rendering pipeline, Gosub gives you the power to shape your browser.
+    </p>
+
+    <div class="modular-items">
+        <p>Select your JS engine</p>
+        <p>Customizable Rendering pipeline</p>
+        <p>Select your JS engine</p>
+
+    </div>
+</div>
+
+
+<style>
+    h2 {
+        color: white;
+        font-size: 3rem;
+        width: 45rem;
+        text-align: center;
+        //margin: 0 auto;
+    }
+
+    p {
+        width: 60rem;
+        color: #DADADA;
+        //margin: 0 auto;
+        text-align: center;
+        margin-bottom: 8.5rem;
+    }
+
+
+    .modularity {
+        display: flex;
+        position: relative;
+        flex-direction: column;
+        align-items: center;
+
+        height: 50rem;
+    }
+
+    .modular-items {
+        display: flex;
+        justify-content: space-around;
+        width: 55rem;
+    }
+
+    .modular-items > p {
+        width: 12rem;
+    }
+</style>

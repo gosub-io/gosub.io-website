@@ -1,0 +1,73 @@
+---
+
+import Logo from "../logo.astro"
+import Gradient from "./gradient.astro"
+---
+
+
+<div class="contribute">
+    <div>
+        <h2>
+            Join us and contribute today!
+        </h2>
+        <p>
+            Become part of our open-source community and help shape the future of browsing.
+        </p>
+        <div class="buttons">
+            <button class="github">Github</button>
+            <button class="zulip">Zulip</button>
+        </div>
+    </div>
+    <div class="logo">
+        <Logo size="512" />
+        <Gradient src="/gradients/logo-bg.svg" width="848" height="842" top={-10} scale={1.7}/>
+    </div>
+</div>
+
+
+<style>
+    h2, p {
+        max-width: 32rem;
+        margin-top: 0;
+    }
+
+
+    .contribute {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 4rem;
+    }
+
+    .buttons {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .buttons button {
+        height: 3rem;
+        width: 10rem;
+        border-radius: .25rem;
+        font-size: 1.5rem;
+        //font-weight: 600;
+    }
+
+    .github {
+        color: black;
+        background-color: white;
+        border: none;
+    }
+
+    .zulip {
+        color: white;
+        background-color: black;
+        border: 4px solid white;
+    }
+
+    .logo {
+        position: relative;
+    }
+
+</style>
+
+

@@ -1,0 +1,61 @@
+---
+import Gradient from "./gradient.astro"
+---
+
+<div class="status">
+    <Gradient src="/gradients/status-left.svg" width="1416" height="2118" top={-48} left={-36} scale="1.2"/>
+    <div>
+        <h2>Current status of the project</h2>
+        <p>
+            Ride now, we are working on the core components of the browser like the CSS System, rendering pipeline or JS
+            Integration
+        </p>
+    </div>
+    <div class="dev-focus">
+        <Gradient src="/gradients/status-right.svg" width="1339" height="1817" top={-48} right={0} rotate={45} scale={1.5}/>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+
+    </div>
+</div>
+
+
+<style>
+
+    .status {
+        padding: 4rem;
+        display: flex;
+        justify-content: space-between;
+        position: relative;
+    }
+
+
+    h2 {
+        max-width: 28rem;
+        margin: 0;
+    }
+
+    p {
+        max-width: 28rem;
+    }
+
+    .dev-focus {
+        display: grid;
+        position: relative;
+        grid-template-columns: repeat(2, 1fr);
+        row-gap: 4rem;
+        column-gap: 2rem;
+    }
+
+    .dev-focus > div {
+        width: 25rem;
+        height: 12rem;
+        border: 2px solid #D9D9D9;
+        border-radius: 1rem;
+        background-color: #0000007D;
+    }
+
+
+</style>

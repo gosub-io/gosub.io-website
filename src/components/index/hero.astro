@@ -1,9 +1,11 @@
 ---
 
+import Gradient from "./gradient.astro"
 ---
 
 <section>
     <div class="hero">
+        <Gradient src="/gradients/blurred-logo.svg" width="1607" height="1086" top={-20} scale={1.2}/>
         <h1>Empower Your Web Experience With Gosub</h1>
         <p>Discover a customizable browser engine built for the modern web.</p>
         <div class="buttons">
@@ -19,11 +21,12 @@
 
     .hero {
         display: flex;
+        position: relative;
         flex-direction: column;
         justify-content: center;
         align-items: center;
         background-color: rgba(0, 0, 0, 0.17);
-        background-image: url("/Texture.png");
+        background-image: url("/gradients/texture.png");
         background-size: 100%;
 
         border-radius: 2rem;
@@ -35,22 +38,18 @@
 
 
     h1 {
-        color: white;
-        font-size: 8rem;
-        filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
         margin-top: 0;
         margin-bottom: 1rem;
     }
 
     p {
-        color: #DADADA;
         margin-bottom: 3rem;
-        font-size: 1.5rem;
     }
 
     section {
         display: flex;
         justify-content: center;
+        margin-bottom: 4rem;
     }
 
 

@@ -2,6 +2,7 @@ html {
   font-family: system-ui, sans-serif;
   background: #01012B;
   background-size: 224px;
+  overflow-x: hidden;
 }
 
 body {
@@ -17,4 +18,41 @@ code {
   Bitstream Vera Sans Mono,
   Courier New,
   monospace;
+}
+
+
+p {
+  color: #D4D4D4;
+  font-size: 1.5rem;
+}
+
+h2 {
+  color: white;
+  font-size: 3rem;
+  font-weight: 900;
+}
+
+p, h2, h1 {
+  text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+h1 {
+  font-size: 8rem;
+  color: white;
+  font-weight: 900;
+  text-align: center;
+}
+
+button {
+  cursor: pointer;
+  transition: scale 0.2s cubic-bezier(.68, -0.55, .27, 1.55),
+  translate 0.2s cubic-bezier(.68, -0.55, .27, 1.55);
+}
+
+button:hover {
+  scale: 1.1;
+}
+
+button:active {
+  translate: 0 2px;
 }
