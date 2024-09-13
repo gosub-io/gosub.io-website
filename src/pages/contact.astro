@@ -1,0 +1,51 @@
+---
+import Layout from '../layouts/layout.astro'
+import Logo from "../components/logo.astro"
+import Navigation from "../components/index/navigation.astro"
+import Socials from "../components/index/socials.astro"
+import Copyright from "../components/copyright.astro";
+import Gradient from "../components/index/gradient.astro";
+import Section from "../components/section.astro";
+import Navbar from "../components/index/navbar.astro";
+import Modularity from "../components/index/modularity.astro";
+import BackButton from "../components/back-button.astro"
+import Footer from "../components/footer.astro"
+---
+
+<Layout title="Gosub Web Browser Engine">
+    <header>
+        <Navbar/>
+    </header>
+
+    <Section first={true}>
+        <section class="status lg:p-3">
+            <BackButton/>
+            <Gradient src="/gradients/status-left.svg" top={20} width={416} height={2118} scale={1.2}/>
+            <Gradient src="/gradients/status-right.svg" top={0} width={1416} height={118} scale={1.2}/>
+
+            <div class="flex-row">
+                <div class="basic-1/3">
+                    <h2 class="text-3xl mb-2">
+                        Contact us
+                    </h2>
+                    <hr>
+                    <p class="mb-3 mt-3">
+                        The best way to get into contact with us is through our Zulip chat. We are always available to answer your questions and to help you
+                        with any problems you might have. We are also available on Github, so you can create an issue or a pull request if you have any suggestions
+                        or improvements.
+                    </p>
+                    <p class="mb-3 mt-3">
+                        You can also drop us an email at <code>info@gosub.io</code>.
+                    </p>
+                </div>
+            </div>
+        </section>
+    </Section>
+
+</Layout>
+
+<Footer/>
+
+
+<style>
+</style>

@@ -1,0 +1,55 @@
+---
+import Layout from '../layouts/layout.astro'
+import Logo from "../components/logo.astro"
+import Navigation from "../components/index/navigation.astro"
+import Socials from "../components/index/socials.astro"
+import Copyright from "../components/copyright.astro";
+import Gradient from "../components/index/gradient.astro";
+import Section from "../components/section.astro";
+import Navbar from "../components/index/navbar.astro";
+import Modularity from "../components/index/modularity.astro";
+import BackButton from "../components/back-button.astro"
+import Footer from "../components/footer.astro";
+---
+
+<Layout title="Gosub Web Browser Engine">
+    <header>
+        <Navbar/>
+    </header>
+
+    <Section first={true}>
+        <section class="status lg:p-3">
+            <BackButton/>
+            <Gradient src="/gradients/status-left.svg" top={-40} width={1616} height={118} scale={1.2}/>
+            <Gradient src="/gradients/status-right.svg" top={-40} width={516} height={618} scale={1.2}/>
+
+            <div class="flex-row">
+                <div class="basic-1/3">
+                    <h2 class="text-3xl mb-2">
+                        Contribute to Gosub
+                    </h2>
+                    <hr>
+
+                    <p class="mb-3 mt-3">
+                        TL;DR: We need more pro-active contributors that can help us out into maturing the project. Even if you are a beginner
+                        (rust) developer, or do not know anything about browser engines, you can help us out.
+                    </p>
+
+                    <p class="mb-3 mt-3">
+                        On mature development projects it is easy to pick an issue from a list, and after reading the CONTRIBUTOR.md file,
+                        to tinker away. We are unfortunately not yet at that stage. We surely come to a point where we can assign issue tickets
+                        to first time contributors, but just not yet. When the project becomes larger, we need more management in order to let
+                        developers work together and make sure the CSS3 square can fit the HTML5 circle. We will need guidance in that field too!
+                    </p>
+
+                    <p class="mb-3 mt-3">
+                        Even if you do not (want to) contribute, you are always welcome to join us in the developer <a href="https://chat.developer.gosub.io">Zulip chat at
+                        https://chat.developer.gosub.io</a> where you will find the developers talking about all things Gosub (and more).
+                    </p>
+                </div>
+            </div>
+        </section>
+    </Section>
+
+</Layout>
+<Footer/>

@@ -1,0 +1,168 @@
+---
+import Layout from '../layouts/layout.astro'
+import Logo from "../components/logo.astro"
+import Navigation from "../components/index/navigation.astro"
+import Socials from "../components/index/socials.astro"
+import Copyright from "../components/copyright.astro";
+import Gradient from "../components/index/gradient.astro";
+import Section from "../components/section.astro";
+import Navbar from "../components/index/navbar.astro";
+import Modularity from "../components/index/modularity.astro";
+import BackButton from "../components/back-button.astro"
+import Footer from "../components/footer.astro";
+---
+
+<Layout title="Gosub Web Browser Engine">
+    <header>
+        <Navbar/>
+    </header>
+
+    <Section first={true}>
+        <section class="status lg:p-3 lg:pt-0">
+            <BackButton/>
+            <Gradient src="/gradients/status-left.svg" top={-20} width={416} height={918} scale={1.9}/>
+            <Gradient src="/gradients/status-right.svg" top={10} width={1916} height={118} scale={1.2}/>
+
+            <div class="flex-row">
+                <div class="basic-1/3">
+                    <h2 class="text-3xl mb-2">
+                        Status of the project
+                    </h2>
+                    <hr>
+                    <p class="mb-20 mt-3">
+                        Gosub is in its very early stages. Since Gosub is not a mere shell around an existing engine, it will take time before we can
+                        introduce a browser that allows you to browse the web. Some of the basic foundations that we are currently working on:
+                    </p>
+
+                    <hr class="mt-8">
+                    <h3 class="text-2xl mb-2 text-blue-500">
+                        ↪ HTML parser
+                    </h3>
+                    <table class="table-fixed text-blue-300">
+                        <tr><td>Status:</td><td>Almost all HTML5 documents are parsed correctly</td></tr>
+                        <tr><td>Tests:</td><td>Passing almost all tests from the html5lib test suite</td></tr>
+                        <tr><td>Improvements:</td><td>Optimization and better handling of invalid HTML and removing as much as copying as possible.</td></tr>
+                    </table>
+                    <p class="mb-3 mt-3">
+                        The HTML parser is actually one of the easiest things to get up and running. There is a lot of documentation that allowed us to write a parser
+                        that is able to parse the vast majority of HTML documents. We are currently working on optimizations and better handling of invalid HTML and
+                        we really like to be able to speed up the process by removing as much memory copying as possible. Also, there is a lot of room for improvement
+                        during the parsing and the building of the document tree. Currently, parsing and building the tree are a single step, but we like to separate
+                        these two functionalities in the future.
+                    </p>
+
+
+                    <hr class="mt-8">
+                    <h3 class="text-2xl mb-2 text-blue-500">
+                        ↪ Bytestream
+                    </h3>
+                    <table class="table-fixed text-blue-300">
+                        <tr><td>Status:</td><td>Proof of concept phase</td></tr>
+                        <tr><td>Tests:</td><td>N/A</td></tr>
+                        <tr><td>Improvements:</td><td>Encoding detection and less copying</td></tr>
+                    </table>
+                    <p class="mb-3 mt-3">
+                        We use our own custom bytestream system from which the parsers (HTML, CSS, JS) read their input. The bytestream system is currently in the
+                        proof of concept phase and we are working on the encoding detection and less copying. The bytestream system is a very important part of the
+                        engine as it is the first component that reads the input from the network and passes it to the parsers.
+                        <br>
+                        <br>
+                        Right now, the bytestream system is not very efficient and we like to improve this in the future. We like to make the bytestream system as
+                        efficient as possible and we like to make it as easy as possible to use for the parsers.
+                    </p>
+
+
+                    <hr class="mt-8">
+                    <h3 class="text-2xl mb-2 text-blue-500">
+                        ↪ CSS3 parser
+                    </h3>
+                    <table class="table-fixed text-blue-300">
+                        <tr><td>Status:</td><td>Proof of concept phase</td></tr>
+                        <tr><td>Tests:</td><td>Parses many realworld CSS correctly</td></tr>
+                        <tr><td>Improvements:</td><td>Less copying, speedups</td></tr>
+                    </table>
+                    <p class="mb-3 mt-3">
+                        The CSS3 system contains of many different sub components. For instance, we have a parser that reads the CSS input from a HTML page. That will
+                        read the stylesheets into internal tree structures so we can extract and compute the different properties on the HTML nodes.
+                        <br>
+                        <br>
+                        But, we also need to know what kind of CSS3 properties exists, and what kind of values they can have. This is where the CSS Value Syntax
+                        parser comes in. This parser reads the CSS Value Syntax and makes sure that the values are correct. This is a very important part of the CSS3
+                        system as it is the first step in the rendering process.
+                        <br>
+                        <br>
+                        At this point we have a syntax matcher that can parse the CSS Value Syntax and we can validate the values. Next up is to make sure the values
+                        can be used by the renderer. Based on external inputs like the viewport size, and the properties of the elements, we need to calculate the final
+                        values for the properties. Besides this, we also need to take into account that some properties actually set multiple properties (like
+                        <code>border</code> will set <code>border-width</code>, <code>border-style</code> and <code>border-color</code>).
+                    </p>
+
+
+                    <hr class="mt-8">
+                    <h3 class="text-2xl mb-2 text-blue-500">
+                        ↪ Render pipeline
+                    </h3>
+                    <table class="table-fixed text-blue-300">
+                        <tr><td>Status:</td><td>Proof of concept phase</td></tr>
+                        <tr><td>Tests:</td><td>None</td></tr>
+                        <tr><td>Improvements:</td><td>Many</td></tr>
+                    </table>
+                    <p class="mb-3 mt-3">
+                        The rendering pipeline will take the HTML Document and CSS stylesheets and will render the final output. At this point this renderer is in its
+                        infancy and consists of a single component that will render the HTML document. Ultimately, there must be multiple steps in this pipeline, where
+                        changes (javascript triggers, user scrolling or clicking) can trigger a re-render of the document without complete redraws.
+                    </p>
+
+
+                    <hr class="mt-8">
+                    <h3 class="text-2xl mb-2 text-blue-500">
+                        ↪ Javascript engine
+                    </h3>
+                    <table class="table-fixed text-blue-300">
+                        <tr><td>Status:</td><td>Initial implementation</td></tr>
+                        <tr><td>Tests:</td><td>None</td></tr>
+                        <tr><td>Improvements:</td><td>Many</td></tr>
+                    </table>
+                    <p class="mb-3 mt-3">
+                        The Javascript engine is one of the components we decided not to create ourselves, but to use an existing engine. We are currently using
+                        the v8 engine and we like this to be pluggable so browser creators can choose their own engine.
+
+                        Javascript that runs in the engine is capable of modifying the DOM and CSS properties, and can trigger re-renders of the document so it will
+                        be implemented in one of the deepest regions of the engine. Also the javascript engine can communicate with other parts of the engine through
+                        the web API's that are available in the browser. We currently have written a simple concept of the <code class="rounded">console API</code> to see if we can
+                        communicate with the javascript engine.
+                    </p>
+
+
+                    <hr class="mt-8">
+                    <h3 class="text-2xl mb-2 mt-20">
+                        And much more...
+                    </h3>
+                    <p class="mb-3 mt-3">
+                        Of course there are many different other things that we are working on. For instance, we are working on the networking stack, configuration systems
+                        to allow to configure the engine, and we are working on the architecture of the engine to make it as modular as possible.
+                        <br>
+                        <br>
+                        There are many different fields where we need more people to work on, and we need more (and probably) better idea's on our implementation. All code
+                        we are currently writing is expected to be rewritten in the future, so we can use all the help we can get. For now, we are experimenting with different
+                        idea's, trying to figure out what works and what doesn't.
+                    </p>
+
+                </div>
+            </div>
+        </section>
+    </Section>
+
+
+    <Footer/>
+</Layout>
+
+
+<style>
+
+    code {
+        background-color: #444;
+        white-space: pre;
+    }
+
+</style>

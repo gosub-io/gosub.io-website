@@ -1,0 +1,65 @@
+---
+import Layout from '../layouts/layout.astro'
+import Logo from "../components/logo.astro"
+import Navigation from "../components/index/navigation.astro"
+import Gradient from "../components/index/gradient.astro";
+import Section from "../components/section.astro";
+import Footer from "../components/footer.astro";
+import Navbar from "../components/index/navbar.astro";
+import Modularity from "../components/index/modularity.astro";
+import BackButton from "../components/back-button.astro"
+---
+
+<Layout title="Gosub Web Browser Engine">
+    <header>
+        <Navbar/>
+    </header>
+
+    <Section first={true}>
+        <section class="status lg:p-3 lg:pt-0 btn-back">
+            <Gradient src="/gradients/status-left.svg" top={-20} width={1416} height={118} scale={1.2}/>
+            <Gradient src="/gradients/status-right.svg" top={10} width={416} height={118} scale={1.1}/>
+
+            <div class="flex-row">
+                <div class="basic-1/3">
+                    <BackButton/>
+                    <h2 class="text-3xl mb-2">
+                        About the Gosub Engine
+                    </h2>
+                    <hr>
+                    <p class="mb-3 mt-3">
+                        Gosub started as a project because some were not happy with the current state of web browsers. Even though it
+                        seems that there are many browsers available, most of them are based on the same engine. Futhermore, the two
+                        biggest browsers, Chrome and Edge, are both based on the same engine. This means that the web is controlled by
+                        two companies. This is not a good situation for the web. The web should be open and free for everyone to use.
+                    </p>
+                    <p class="mb-3 mt-3">
+                        But writing a browser engine is not an easy task. It requires a lot of knowledge in many obvious and non-obvious
+                        facets of the web, protocols, standards, cpu architecture, and more. This is why we need your help. With just a
+                        few developers we can bootstrap a new engine, but with more developers we can create a new engine that can
+                        compete and force the big companies to be more open and free.
+                    </p>
+                    <p class="mb-3 mt-3">
+                        Gosub started as a project because some were not happy with the current state of web browsers. Even though it
+                        seems that there are many browsers available, most of them are based on the same engine. Futhermore, the two
+                        biggest browsers, Chrome and Edge, are both based on the same engine. This means that the web is controlled by
+                        two companies. This is not a good situation for the web. The web should be open and free for everyone to use.
+                    </p>
+                    <p class="mb-3 mt-3">
+                        But writing a browser engine is not an easy task. It requires a lot of knowledge in many obvious and non-obvious
+                        facets of the web, protocols, standards, cpu architecture, and more. This is why we need your help. With just a
+                        few developers we can bootstrap a new engine, but with more developers we can create a new engine that can
+                        compete and force the big companies to be more open and free.
+                    </p>
+                </div>
+            </div>
+        </section>
+    </Section>
+
+    <Footer/>
+
+</Layout>
+
+
+<style>
+</style>

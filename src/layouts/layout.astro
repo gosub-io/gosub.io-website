@@ -11,13 +11,25 @@ const {title} = Astro.props
 <html lang="en">
 <head>
     <meta charset="UTF-8"/>
-    <meta name="description" content="GoSuB Browser"/>
-    <meta name="viewport" content="width=device-width"/>
-    <link rel="icon" type="image/png" href="/logo.png"/>
+    <meta name="description" content="Gosub Web Browser Engine"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="../../public/favicon.ico"/>
     <meta name="generator" content={Astro.generator}/>
     <title>{title}</title>
+
 </head>
 <body>
-<slot/>
+    <main class="text-justify">
+        <slot/>
+    </main>
 </body>
 </html>
+
+<style>
+    @screen lg {
+        main {
+            max-width: 1280px;
+            margin: 0 auto;
+        }
+    }
+</style>
