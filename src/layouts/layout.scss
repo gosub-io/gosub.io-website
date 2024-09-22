@@ -37,7 +37,11 @@ a.button {
   height: 4.5rem;
   border: none;
   align-content: center;
+}
 
+a[href]:not(.button):not(.btn-hover) {
+  color: cyan;
+  text-decoration: underline;
 }
 
 .button, .btn-hover {
